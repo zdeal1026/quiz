@@ -6,35 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeQuiz</title>
-    <link rel="shortcut icon" href="assets/matrix.png"
+    <link rel="shortcut icon" href="assets/matrix.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>Coding Quiz</header>
 
-    <section class="container">
-        <div id="questions" class="hide"></div>
-        <h1>Question</h1>
-        <div id="option" class="btn-grid">
+    <main class="container">
+
+
+        <section id="directions">
+            <p>This is a short quiz about coding. Click the button to start!</p>
+            <button id="startQuiz">START QUIZ</button>
+            <button id="seeScore">High Scores</button>
+        </section>
+
+
+        <section id="option" class="btn-grid">
+            <div id="time"> Time: </div>
+
+            <div id="questoinHere">
+                <p>""</p>
+            </div>
             <button class="selections"> A</button>
             <button class="selections"> B</button>
             <button class="selections"> C</button>
             <button class="selections"> D</button>
-        </div>
+            <div id="score"></div>
+        </section>
 
-        <div id="buttons">
-            <button id="start" class="begin">Click to Start!</button>
-            <button id="advance" class="advance-btn hide">Next</button>
-        </div>
+        <section>
+            <div id="final"></div>
+            <textarea type="text" id="scoreEntry">Enter name here!</textarea>
+            <button id="userData">Submit!</button>
+            <div id="results">
+                <div id="scoreBoard">
+                    <h1>Username</h1>
+                    <h1>Score</h1>
+                </div>
+            <div id="leaderBoard"></div>
+            <div id="leaderScore"></div>
+            </div>
+        </section>
 
-        </div>
+        <section id="endButtons">
+            <button id="repeat">Click to Play Again!</button>
+            <button id="clear">Clear Score</button>
+        </section>
 
-    </section>
-
-
-
-
+    </main>
 
     <script src="script.js"></script>
 </body>
