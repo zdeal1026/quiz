@@ -24,9 +24,9 @@
 
 
         <section id="options">
-            <div id="timer"> Time: </div>
+            <div id="count"> Time: </div>
 
-            <div id="questionHere">
+            <div id="questionHere" id="questions">
                 <p></p>
             </div>
             <ul>
@@ -42,7 +42,7 @@
 
         <section>
             <div id="final"></div>
-            <textarea type="text" id="scoreEntry" id="initials">Enter name here!</textarea>
+            <input type="text" size = "40" placeholder="User Initials" name="intials" id="initials"/>
             <button id="enter">Submit!</button>
             <div id="results">
                 <div id="scoreBoard">
@@ -55,8 +55,8 @@
         </section>
 
         <section id="endButtons">
-            <button id="repeat">Click to Play Again!</button>
-            <button id="clear">Clear Score</button>
+            <button id="repeat" onclick="repeatQuiz();">Click to Play Again!</button>
+            <button id="clear" onclick="clearData();">Clear Score</button>
         </section>
 
     </main>
