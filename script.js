@@ -82,7 +82,7 @@ var score = 0;
 var correct;
 var interval;
 
-//
+//gets questions
 function getQuestions() {
 
     endEl.style.display = "none";
@@ -99,6 +99,7 @@ function getQuestions() {
     delta.innerHTML = firstOne.pickD;
 };
 
+//starts questions
 function showQuestions() {
     endEl.style.display = "none";
     giveDirections.style.display = "none";
@@ -118,17 +119,16 @@ function showQuestions() {
 
 }
 
-//start here
+//displays score
 function showResults() {
     optionsEl.style.display = "none";
     endEl.style.display = "flex";
-    //questionsEl.style.display = "none"
     clearInterval(interval);
     initialsEl.value = "";
     finalEl.innerHTML = "You got " + score + " out of 6 correct!";
 }
 
-//check parentheses here
+//scores/localstorage
 enterEl.addEventListener("click", function highscore() {
 
     if (initialsEl.value === "") {
