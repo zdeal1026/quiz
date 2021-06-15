@@ -19,40 +19,42 @@
         <section id="directions">
             <p>This is a short quiz about coding. Click the button to start!</p>
             <button id="startQuiz">START QUIZ</button>
-            <button id="seeScore">High Scores</button>
+            <button id="seeScore" onclick="showHigh();">High Scores</button>
         </section>
 
 
         <section id="options">
             <div id="count"> Time: </div>
 
-            <div id="questionHere" id="questions">
+            <div id="questionHere">
                 <p></p>
             </div>
-            <ul>
-                <li><button id="a" onclick="checkAnswer('a')"> A</button></li>
-                <li><button id="b" onclick="checkAnswer('b')"> B</button></li>
-                <li><button id="c" onclick="checkAnswer('c')"> C</button></li>
-                <li><button id="d" onclick="checkAnswer('d')"> D</button></li>
+            <ul id="questions">
+                <li><button id="a" onclick="gradeAnswer('a')"> A</button></li>
+                <li><button id="b" onclick="gradeAnswer('b')"> B</button></li>
+                <li><button id="c" onclick="gradeAnswer('c')"> C</button></li>
+                <li><button id="d" onclick="gradeAnswer('d')"> D</button></li>
             </ul>
             <div id="score"></div>
         </section>
 
-        <div id="end"></div>
-
-        <section>
+        <div id="end">
             <div id="final"></div>
-            <input type="text" size = "40" placeholder="User Initials" name="intials" id="initials"/>
+            <input type="text" size="40" placeholder="User Initials" name="intials" id="initials" />
             <button id="enter">Submit!</button>
-            <div id="results">
-                <div id="scoreBoard">
-                    <h1>Username</h1>
-                    <h1>Score</h1>
+        </div>
+
+        <div id="results">
+            <div id="scoreBoard">
+
+                <div id="flex">
+                    <h1 id="leaderBoard">Username</h1>
+                    <h1 id="leaderScore">Score</h1>
                 </div>
-                <div id="leaderBoard"></div>
-                <div id="leaderScore"></div>
+
             </div>
-        </section>
+        </div>
+
 
         <section id="endButtons">
             <button id="repeat" onclick="repeatQuiz();">Click to Play Again!</button>

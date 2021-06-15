@@ -4,6 +4,7 @@ var optionsEl = document.getElementById("options")
 var scoreEl = document.getElementById("score");
 var finalEl = document.getElementById("final");
 var endEl = document.getElementById("end");
+var questionsEl = document.getElementById("questions")
 var questionHereEl = document.getElementById("questionHere");
 var countEl = document.getElementById("count");
 var startQuizEl = document.getElementById("startQuiz");
@@ -18,6 +19,7 @@ var alpha = document.getElementById("a");
 var beta = document.getElementById("b");
 var charlie = document.getElementById("c");
 var delta = document.getElementById("d");
+var clearEl = document.getElementById("clear")
 
 // questions for the quiz
 var askQuestions = [
@@ -82,7 +84,10 @@ var interval;
 
 //
 function getQuestions() {
+
     endEl.style.display = "none";
+
+
     if (currentOne === allQuestions) {
         return showResults();
     }
@@ -97,6 +102,7 @@ function getQuestions() {
 function showQuestions() {
     endEl.style.display = "none";
     giveDirections.style.display = "none";
+
     getQuestions();
 
     interval = setInterval(function () {
@@ -109,12 +115,14 @@ function showQuestions() {
         }
     }, 1000);
     optionsEl.style.display = "block";
+
 }
 
 //start here
 function showResults() {
-    optionsEl.style.display = "none"
+    optionsEl.style.display = "none";
     endEl.style.display = "flex";
+    //questionsEl.style.display = "none"
     clearInterval(interval);
     initialsEl.value = "";
     finalEl.innerHTML = "You got " + score + " out of 6 correct!";
@@ -166,9 +174,9 @@ function generateHigh() {
 function showHigh() {
     giveDirections.style.display = "none"
     endEl.style.display = "none";
+    resultsEl.style.display = "flex";
     scoreBoardEl.style.display = "block";
     endbuttonsEl.style.display = "flex";
-    resultsEl.style.display = "flex";
 
     generateHigh();
 }
@@ -185,6 +193,7 @@ function repeatQuiz() {
     resultsEl.style.display = "none";
     endEl.style.display = "none";
     directions.style.display = "flex";
+
     timeOnClock = 46;
     score = 0;
     currentOne = 0;
@@ -192,7 +201,7 @@ function repeatQuiz() {
 
 //checks the answers
 
-function checkAnswer(answer) {
+function gradeAnswer(answer) {
     correct = askQuestions[currentOne].answer;
 
     if (answer === correct && currentOne !== allQuestions) {
