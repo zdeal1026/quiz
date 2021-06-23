@@ -46,3 +46,4 @@ Ideas used from Trilogy Education services, Anthony Cooper, Youtube, and FreeCod
 # Link
 https://zdeal1026.github.io/quiz/
 
+©Copyright 2021, Zachary A. Deal
