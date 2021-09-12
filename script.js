@@ -82,7 +82,10 @@ var score = 0;
 var correct;
 var interval;
 
-optionsEl.style.display = "none"
+optionsEl.style.display = "none";
+endEl.style.display = "none";
+resultsEl.style.display = "none";
+endbuttonsEl.style.display = "none";
 
 
 //gets questions
@@ -195,7 +198,8 @@ function clearData() {
 function repeatQuiz() {
     resultsEl.style.display = "none";
     endEl.style.display = "none";
-    directions.style.display = "flex";
+    endbuttonsEl.style.display = "none";
+    giveDirections.style.display = "block";
 
     timeOnClock = 46;
     score = 0;
