@@ -1,71 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeQuiz</title>
-    <link rel="shortcut icon" href="assets/matrix.png">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="shortcut icon" href="assets/matrix.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>Coding Quiz</header>
 
     <main class="container">
+      <section id="directions">
+        <p>This is a short quiz about coding. Click the button to start!</p>
+        <button id="startQuiz">START QUIZ</button>
+        <button id="seeScore" onclick="showHigh();">High Scores</button>
+      </section>
 
+      <section id="options">
+        <div id="count">Time:</div>
 
-        <section id="directions">
-            <p>This is a short quiz about coding. Click the button to start!</p>
-            <button id="startQuiz">START QUIZ</button>
-            <button id="seeScore" onclick="showHigh();">High Scores</button>
-        </section>
-
-
-        <section id="options">
-            <div id="count"> Time: </div>
-
-            <div id="questionHere">
-                <p></p>
-            </div>
-            <ul id="questions">
-                <li><button id="a" onclick="gradeAnswer('a')"> A</button></li>
-                <li><button id="b" onclick="gradeAnswer('b')"> B</button></li>
-                <li><button id="c" onclick="gradeAnswer('c')"> C</button></li>
-                <li><button id="d" onclick="gradeAnswer('d')"> D</button></li>
-            </ul>
-            <div id="score"></div>
-        </section>
-
-        <div id="end">
-            <div id="final"></div>
-            <input type="text" size="40" placeholder="User Initials" name="intials" id="initials" />
-            <button id="enter">Submit!</button>
+        <div id="questionHere">
+          <p></p>
         </div>
 
-        <div id="results">
-            <div id="scoreBoard">
+        <ul id="questions">
+          <li><button id="a" onclick="gradeAnswer('a')">A</button></li>
+          <li><button id="b" onclick="gradeAnswer('b')">B</button></li>
+          <li><button id="c" onclick="gradeAnswer('c')">C</button></li>
+          <li><button id="d" onclick="gradeAnswer('d')">D</button></li>
+        </ul>
+        <div id="score"></div>
+      </section>
 
-                <div id="flex">
-                    <h1 id="leaderBoard">Username</h1>
-                    <h1 id="leaderScore">Score</h1>
-                </div>
+      <div id="end">
+        <div id="final"></div>
+        <input
+          type="text"
+          size="40"
+          placeholder="User Initials"
+          name="intials"
+          id="initials"
+        />
+        <button id="enter">Submit!</button>
+      </div>
 
-            </div>
+      <div id="results">
+        <div id="scoreBoard">
+          <div id="flex">
+            <h1 id="leaderBoard">Username</h1>
+            <h1 id="leaderScore">Score</h1>
+          </div>
         </div>
+      </div>
 
-
-        <section id="endButtons">
-            <button id="repeat" onclick="repeatQuiz();">Click to Play Again!</button>
-            <button id="clear" onclick="clearData();">Clear Score</button>
-        </section>
-
+      <section id="endButtons">
+        <button id="repeat" onclick="repeatQuiz();">
+          Click to Play Again!
+        </button>
+        <button id="clear" onclick="clearData();">Clear Score</button>
+      </section>
     </main>
 
-    <img src="assets/screen.png">
-
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -82,6 +82,9 @@ var score = 0;
 var correct;
 var interval;
 
+optionsEl.style.display = "none"
+
+
 //gets questions
 function getQuestions() {
 
